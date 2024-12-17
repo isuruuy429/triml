@@ -7,11 +7,12 @@ function App() {
     chief_complaint: "",
     spo2: "",
     pulse_rate: "",
-    systolic_bp: ""
+    systolic_bp: "",
   });
 
   const [response, setResponse] = useState(null);
   const [error, setError] = useState("");
+  const [explanation, setExplanation] = useState("");
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -22,16 +23,34 @@ function App() {
     e.preventDefault();
     setError("");
     setResponse(null);
+    setExplanation("");
 
     try {
       const apiResponse = await axios.post("http://127.0.0.1:9000/main/triage", {
         chief_complaint: formData.chief_complaint,
-        spo2: formData.spo2,
-        pulse_rate: formData.pulse_rate,
-        systolic_bp: formData.systolic_bp,
+        spo2: parseFloat(formData.spo2),
+        pulse_rate: parseFloat(formData.pulse_rate),
+        systolic_bp: parseFloat(formData.systolic_bp),
       });
 
-      setResponse(apiResponse.data);
+      const data = apiResponse.data;
+      setResponse(data);
+
+      // Generate explanation based on positive impacts
+      const positiveImpacts = [];
+      if (data.pulse_rate_importance_impact === "positive")
+        positiveImpacts.push("Pulse Rate");
+      if (data.spo2_importance_impact === "positive")
+        positiveImpacts.push("SpO₂ Level");
+      if (data.systolic_bp_importance_impact === "positive")
+        positiveImpacts.push("Systolic BP");
+
+      const impactFeatures = positiveImpacts.join(", ") || "other factors";
+      setExplanation(
+        `This prediction is based on ${impactFeatures}. With the confidence of ${data.confidence_score_level.toFixed(
+          2
+        )}%, the predicted triage level is ${data.triage_level}.`
+      );
     } catch (err) {
       console.error("Error:", err);
       setError("Failed to fetch triage level. Please try again.");
@@ -96,9 +115,18 @@ function App() {
 
       {response && (
         <div className="result">
-          <h3>Predicted Triage Level: {response.triage_level}</h3>
-          <div className="description">
-            <pre>{JSON.stringify(response, null, 2)}</pre>
+          <h3 className="triage-level">Predicted Triage Level: {response.triage_level}</h3>
+          <div className="left-aligned-text">
+            <p>{explanation}</p>
+            <p>For more information, see below:</p>
+            <div className="description">
+              <li>Confidence Score (Level): {response.confidence_score_level}</li>
+              <li>Confidence Score (Range): {response.confidence_score_range}</li>
+              <li>Pulse Rate Impact: {response.pulse_rate_importance_impact}</li>
+              <li>SpO₂ Impact: {response.spo2_importance_impact}</li>
+              <li>Systolic BP Impact: {response.systolic_bp_importance_impact}</li>
+              <li>Triage Range: {response.triage_range}</li>
+            </div>
           </div>
         </div>
       )}
