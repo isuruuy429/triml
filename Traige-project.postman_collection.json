@@ -1,0 +1,7321 @@
+{
+	"info": {
+		"_postman_id": "877cda76-e173-43f0-ba81-757a486d579e",
+		"name": "Traige-project",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "2350060"
+	},
+	"item": [
+		{
+			"name": "triage-range",
+			"item": [
+				{
+					"name": "level1",
+					"item": [
+						{
+							"name": "http://127.0.0.1:7001/predict/triage/level",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"triage_level_test\", function () {",
+											"    var jsonData = pm.response.json();",
+											"    pm.expect(jsonData.triage_range).to.eql(\"Range 1\");",
+											"});"
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"chief_complaint\": \"Severe allergic reaction with swelling\",\n    \"spo2\": 93,\n    \"pulse_rate\": 120,\n    \"systolic_bp\": 145\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:{{PORT}}/predict/triage/range",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "{{PORT}}",
+									"path": [
+										"predict",
+										"triage",
+										"range"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "http://127.0.0.1:7001/predict/triage/level Copy",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"triage_level_test\", function () {",
+											"    var jsonData = pm.response.json();",
+											"    pm.expect(jsonData.triage_range).to.eql(\"Range 1\");",
+											"});"
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"chief_complaint\": \"Unresponsive, not breathing\",\n    \"spo2\": 70,\n    \"pulse_rate\": 40,\n    \"systolic_bp\": 90\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:{{PORT}}/predict/triage/range",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "{{PORT}}",
+									"path": [
+										"predict",
+										"triage",
+										"range"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "http://127.0.0.1:7001/predict/triage/level Copy 2",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"triage_level_test\", function () {",
+											"    var jsonData = pm.response.json();",
+											"    pm.expect(jsonData.triage_range).to.eql(\"Range 1\");",
+											"});"
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"chief_complaint\": \"Severe shortness of breath\",\n    \"spo2\": 82,\n    \"pulse_rate\": 125,\n    \"systolic_bp\": 200\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:{{PORT}}/predict/triage/range",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "{{PORT}}",
+									"path": [
+										"predict",
+										"triage",
+										"range"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "http://127.0.0.1:7001/predict/triage/level Copy 3",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"triage_level_test\", function () {",
+											"    var jsonData = pm.response.json();",
+											"    pm.expect(jsonData.triage_range).to.eql(\"Range 1\");",
+											"});"
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"chief_complaint\": \"Gunshot wound to chest\",\n    \"spo2\": 60,\n    \"pulse_rate\": 45,\n    \"systolic_bp\": 50\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:{{PORT}}/predict/triage/range",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "{{PORT}}",
+									"path": [
+										"predict",
+										"triage",
+										"range"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "http://127.0.0.1:7001/predict/triage/level Copy 4",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"triage_level_test\", function () {",
+											"    var jsonData = pm.response.json();",
+											"    pm.expect(jsonData.triage_range).to.eql(\"Range 1\");",
+											"});"
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"chief_complaint\": \"severe Shortness of breath\",\n    \"spo2\":70,\n    \"pulse_rate\":160,\n    \"systolic_bp\":130\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:{{PORT}}/predict/triage/range",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "{{PORT}}",
+									"path": [
+										"predict",
+										"triage",
+										"range"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "http://127.0.0.1:7001/predict/triage/level Copy 5",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"triage_level_test\", function () {",
+											"    var jsonData = pm.response.json();",
+											"    pm.expect(jsonData.triage_range).to.eql(\"Range 1\");",
+											"});"
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"chief_complaint\": \"severe sudden headache,altered consciousness\",\n    \"spo2\":90,\n    \"pulse_rate\":40,\n    \"systolic_bp\":230\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:{{PORT}}/predict/triage/range",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "{{PORT}}",
+									"path": [
+										"predict",
+										"triage",
+										"range"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "http://127.0.0.1:7001/predict/triage/level Copy 6",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"triage_level_test\", function () {",
+											"    var jsonData = pm.response.json();",
+											"    pm.expect(jsonData.triage_range).to.eql(\"Range 1\");",
+											"});"
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"chief_complaint\": \"Unconscious\",\n    \"spo2\":80,\n    \"pulse_rate\":40,\n    \"systolic_bp\":70\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:{{PORT}}/predict/triage/range",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "{{PORT}}",
+									"path": [
+										"predict",
+										"triage",
+										"range"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "http://127.0.0.1:7001/predict/triage/level Copy 7",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"triage_level_test\", function () {",
+											"    var jsonData = pm.response.json();",
+											"    pm.expect(jsonData.triage_range).to.eql(\"Range 1\");",
+											"});"
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"chief_complaint\": \"severe chest pain\",\n    \"spo2\":80,\n    \"pulse_rate\":139,\n    \"systolic_bp\":220\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:{{PORT}}/predict/triage/range",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "{{PORT}}",
+									"path": [
+										"predict",
+										"triage",
+										"range"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "http://127.0.0.1:7001/predict/triage/level Copy 8",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"triage_level_test\", function () {",
+											"    var jsonData = pm.response.json();",
+											"    pm.expect(jsonData.triage_range).to.eql(\"Range 1\");",
+											"});"
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"chief_complaint\": \"severe face swelling\",\n    \"spo2\":85,\n    \"pulse_rate\":140,\n    \"systolic_bp\":80\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:{{PORT}}/predict/triage/range",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "{{PORT}}",
+									"path": [
+										"predict",
+										"triage",
+										"range"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "http://127.0.0.1:7001/predict/triage/level Copy 9",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"triage_level_test\", function () {",
+											"    var jsonData = pm.response.json();",
+											"    pm.expect(jsonData.triage_range).to.eql(\"Range 1\");",
+											"});"
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"chief_complaint\": \"Severe bleeding after a car accident\",\n    \"spo2\": 88,\n    \"pulse_rate\": 135,\n    \"systolic_bp\": 130\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:{{PORT}}/predict/triage/range",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "{{PORT}}",
+									"path": [
+										"predict",
+										"triage",
+										"range"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "level2 Copy",
+					"item": [
+						{
+							"name": "http://127.0.0.1:7001/predict/triage/level Copy 10",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"triage_level_test\", function () {",
+											"    var jsonData = pm.response.json();",
+											"    pm.expect(jsonData.triage_range).to.eql(\"Range 1\");",
+											"});"
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"chief_complaint\": \"Chest pain, feels faint\",\n    \"systolic_bp\": 140,\n    \"spo2\": 70,\n    \"pulse_rate\": 140\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:{{PORT}}/predict/triage/range",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "{{PORT}}",
+									"path": [
+										"predict",
+										"triage",
+										"range"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "http://127.0.0.1:7001/predict/triage/level Copy 11",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"triage_level_test\", function () {",
+											"    var jsonData = pm.response.json();",
+											"    pm.expect(jsonData.triage_range).to.eql(\"Range 1\");",
+											"});"
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"chief_complaint\": \"Traumatic injury to the head\",\n    \"spo2\": 90,\n    \"pulse_rate\": 115,\n    \"systolic_bp\": 165\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:{{PORT}}/predict/triage/range",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "{{PORT}}",
+									"path": [
+										"predict",
+										"triage",
+										"range"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "http://127.0.0.1:7001/predict/triage/level Copy 12",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"triage_level_test\", function () {",
+											"    var jsonData = pm.response.json();",
+											"    pm.expect(jsonData.triage_range).to.eql(\"Range 1\");",
+											"});"
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"chief_complaint\": \"Severe abdominal pain with vomiting\",\n    \"spo2\": 96,\n    \"pulse_rate\": 120,\n    \"systolic_bp\": 135\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:{{PORT}}/predict/triage/range",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "{{PORT}}",
+									"path": [
+										"predict",
+										"triage",
+										"range"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "http://127.0.0.1:7001/predict/triage/level Copy 13",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"triage_level_test\", function () {",
+											"    var jsonData = pm.response.json();",
+											"    pm.expect(jsonData.triage_range).to.eql(\"Range 1\");",
+											"});"
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"chief_complaint\": \"Possible stroke, slurred speech\",\n    \"spo2\": 94,\n    \"pulse_rate\": 100,\n    \"systolic_bp\": 170\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:{{PORT}}/predict/triage/range",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "{{PORT}}",
+									"path": [
+										"predict",
+										"triage",
+										"range"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "http://127.0.0.1:7001/predict/triage/level Copy 14",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"triage_level_test\", function () {",
+											"    var jsonData = pm.response.json();",
+											"    pm.expect(jsonData.triage_range).to.eql(\"Range 1\");",
+											"});"
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"chief_complaint\": \"Pain in the arm after a fall\",\n    \"spo2\": 99,\n    \"pulse_rate\": 125,\n    \"systolic_bp\": 115\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:{{PORT}}/predict/triage/range",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "{{PORT}}",
+									"path": [
+										"predict",
+										"triage",
+										"range"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "http://127.0.0.1:7001/predict/triage/level Copy 15",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"triage_level_test\", function () {",
+											"    var jsonData = pm.response.json();",
+											"    pm.expect(jsonData.triage_range).to.eql(\"Range 1\");",
+											"});"
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"chief_complaint\": \"Pain in the arm after a fall\",\n    \"spo2\": 99,\n    \"pulse_rate\": 125,\n    \"systolic_bp\": 115\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:{{PORT}}/predict/triage/range",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "{{PORT}}",
+									"path": [
+										"predict",
+										"triage",
+										"range"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "http://127.0.0.1:7001/predict/triage/level Copy 16",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"triage_level_test\", function () {",
+											"    var jsonData = pm.response.json();",
+											"    pm.expect(jsonData.triage_range).to.eql(\"Range 1\");",
+											"});"
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"chief_complaint\": \"Severe headache\",\n    \"spo2\": 99,\n    \"pulse_rate\": 105,\n    \"systolic_bp\": 140\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:{{PORT}}/predict/triage/range",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "{{PORT}}",
+									"path": [
+										"predict",
+										"triage",
+										"range"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "http://127.0.0.1:7001/predict/triage/level Copy 17",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"triage_level_test\", function () {",
+											"    var jsonData = pm.response.json();",
+											"    pm.expect(jsonData.triage_range).to.eql(\"Range 1\");",
+											"});"
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"chief_complaint\": \"Severe abdominal pain\",\n    \"spo2\": 88,\n    \"pulse_rate\": 135,\n    \"systolic_bp\": 175\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:{{PORT}}/predict/triage/range",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "{{PORT}}",
+									"path": [
+										"predict",
+										"triage",
+										"range"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "http://127.0.0.1:7001/predict/triage/level Copy 18",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"triage_level_test\", function () {",
+											"    var jsonData = pm.response.json();",
+											"    pm.expect(jsonData.triage_range).to.eql(\"Range 1\");",
+											"});"
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"chief_complaint\": \"Acute heart failure\",\n    \"spo2\": 85,\n    \"pulse_rate\": 120,\n    \"systolic_bp\": 75\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:{{PORT}}/predict/triage/range",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "{{PORT}}",
+									"path": [
+										"predict",
+										"triage",
+										"range"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "http://127.0.0.1:7001/predict/triage/level Copy 19",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"triage_level_test\", function () {",
+											"    var jsonData = pm.response.json();",
+											"    pm.expect(jsonData.triage_range).to.eql(\"Range 1\");",
+											"});"
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"chief_complaint\": \"Chest pain\",\n    \"spo2\": 85,\n    \"pulse_rate\": 140,\n    \"systolic_bp\": 180\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:{{PORT}}/predict/triage/range",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "{{PORT}}",
+									"path": [
+										"predict",
+										"triage",
+										"range"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "level3 Copy",
+					"item": [
+						{
+							"name": "http://127.0.0.1:7001/predict/triage/level Copy 20",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"triage_level_test\", function () {",
+											"    var jsonData = pm.response.json();",
+											"    pm.expect(jsonData.triage_range).to.eql(\"Range 2\");",
+											"});"
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"chief_complaint\": \"Headache with mild dizziness\",\n    \"spo2\": 99,\n    \"pulse_rate\": 105,\n    \"systolic_bp\": 130\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:{{PORT}}/predict/triage/range",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "{{PORT}}",
+									"path": [
+										"predict",
+										"triage",
+										"range"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "http://127.0.0.1:7001/predict/triage/level Copy 21",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"triage_level_test\", function () {",
+											"    var jsonData = pm.response.json();",
+											"    pm.expect(jsonData.triage_range).to.eql(\"Range 2\");",
+											"});"
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"chief_complaint\": \"high cough\",\n    \"spo2\": 92,\n    \"pulse_rate\": 115,\n    \"systolic_bp\": 125\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:{{PORT}}/predict/triage/range",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "{{PORT}}",
+									"path": [
+										"predict",
+										"triage",
+										"range"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "http://127.0.0.1:7001/predict/triage/level Copy 22",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"triage_level_test\", function () {",
+											"    var jsonData = pm.response.json();",
+											"    pm.expect(jsonData.triage_range).to.eql(\"Range 2\");",
+											"});"
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"chief_complaint\": \"Back pain after lifting heavy objects\",\n    \"spo2\": 99,\n    \"pulse_rate\": 108,\n    \"systolic_bp\": 120\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:{{PORT}}/predict/triage/range",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "{{PORT}}",
+									"path": [
+										"predict",
+										"triage",
+										"range"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "http://127.0.0.1:7001/predict/triage/level Copy 23",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"triage_level_test\", function () {",
+											"    var jsonData = pm.response.json();",
+											"    pm.expect(jsonData.triage_range).to.eql(\"Range 2\");",
+											"});"
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"chief_complaint\": \"Pain in the arm with swelling after a fall\",\n    \"spo2\": 99,\n    \"pulse_rate\": 130,\n    \"systolic_bp\": 110\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:{{PORT}}/predict/triage/range",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "{{PORT}}",
+									"path": [
+										"predict",
+										"triage",
+										"range"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "http://127.0.0.1:7001/predict/triage/level Copy 24",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"triage_level_test\", function () {",
+											"    var jsonData = pm.response.json();",
+											"    pm.expect(jsonData.triage_range).to.eql(\"Range 2\");",
+											"});"
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"chief_complaint\": \"Difficulty breathing with fever\",\n    \"spo2\": 94,\n    \"pulse_rate\": 120,\n    \"systolic_bp\": 128\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:{{PORT}}/predict/triage/range",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "{{PORT}}",
+									"path": [
+										"predict",
+										"triage",
+										"range"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "http://127.0.0.1:7001/predict/triage/level Copy 25",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"triage_level_test\", function () {",
+											"    var jsonData = pm.response.json();",
+											"    pm.expect(jsonData.triage_range).to.eql(\"Range 2\");",
+											"});"
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"chief_complaint\": \"Severe leg pain after a fall\",\n    \"spo2\": 98,\n    \"pulse_rate\": 105,\n    \"systolic_bp\": 130\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:{{PORT}}/predict/triage/range",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "{{PORT}}",
+									"path": [
+										"predict",
+										"triage",
+										"range"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "http://127.0.0.1:7001/predict/triage/level Copy 26",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"triage_level_test\", function () {",
+											"    var jsonData = pm.response.json();",
+											"    pm.expect(jsonData.triage_range).to.eql(\"Range 2\");",
+											"});"
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"chief_complaint\": \"Severe vomiting and dehydration\",\n    \"spo2\": 97,\n    \"pulse_rate\": 115,\n    \"systolic_bp\": 125\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:{{PORT}}/predict/triage/range",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "{{PORT}}",
+									"path": [
+										"predict",
+										"triage",
+										"range"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "http://127.0.0.1:7001/predict/triage/level Copy 27",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"triage_level_test\", function () {",
+											"    var jsonData = pm.response.json();",
+											"    pm.expect(jsonData.triage_range).to.eql(\"Range 2\");",
+											"});"
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"chief_complaint\": \"Severe pain in lower back with numbness\",\n    \"spo2\": 98,\n    \"pulse_rate\": 110,\n    \"systolic_bp\": 140\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:{{PORT}}/predict/triage/range",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "{{PORT}}",
+									"path": [
+										"predict",
+										"triage",
+										"range"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "http://127.0.0.1:7001/predict/triage/level Copy 28",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"triage_level_test\", function () {",
+											"    var jsonData = pm.response.json();",
+											"    pm.expect(jsonData.triage_range).to.eql(\"Range 2\");",
+											"});"
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"chief_complaint\": \"Severe headache with blurred vision\",\n    \"spo2\": 97,\n    \"pulse_rate\": 110,\n    \"systolic_bp\": 160\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:{{PORT}}/predict/triage/range",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "{{PORT}}",
+									"path": [
+										"predict",
+										"triage",
+										"range"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "http://127.0.0.1:7001/predict/triage/level Copy 29",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"triage_level_test\", function () {",
+											"    var jsonData = pm.response.json();",
+											"    pm.expect(jsonData.triage_range).to.eql(\"Range 2\");",
+											"});"
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"chief_complaint\": \"Pain in the arm\",\n    \"spo2\": 99,\n    \"pulse_rate\": 78,\n    \"systolic_bp\": 110\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:{{PORT}}/predict/triage/range",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "{{PORT}}",
+									"path": [
+										"predict",
+										"triage",
+										"range"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "level4 Copy",
+					"item": [
+						{
+							"name": "http://127.0.0.1:7001/predict/triage/level Copy 30",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"triage_level_test\", function () {",
+											"    var jsonData = pm.response.json();",
+											"    pm.expect(jsonData.triage_range).to.eql(\"Range 3\");",
+											"});"
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"chief_complaint\": \"Mild headache, slight dizziness\",\n    \"systolic_bp\": 120,\n    \"spo2\": 98,\n    \"pulse_rate\": 90\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:{{PORT}}/predict/triage/range",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "{{PORT}}",
+									"path": [
+										"predict",
+										"triage",
+										"range"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "http://127.0.0.1:7001/predict/triage/level Copy 31",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"triage_level_test\", function () {",
+											"    var jsonData = pm.response.json();",
+											"    pm.expect(jsonData.triage_range).to.eql(\"Range 3\");",
+											"});"
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"chief_complaint\": \"Insect bite with mild swelling\",\n    \"spo2\": 99,\n    \"pulse_rate\": 85,\n    \"systolic_bp\": 120\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:{{PORT}}/predict/triage/range",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "{{PORT}}",
+									"path": [
+										"predict",
+										"triage",
+										"range"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "http://127.0.0.1:7001/predict/triage/level Copy 32",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"triage_level_test\", function () {",
+											"    var jsonData = pm.response.json();",
+											"    pm.expect(jsonData.triage_range).to.eql(\"Range 3\");",
+											"});"
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"chief_complaint\": \"Minor abdominal pain without vomiting or diarrhea\",\n    \"spo2\": 98,\n    \"pulse_rate\": 80,\n    \"systolic_bp\": 125\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:{{PORT}}/predict/triage/range",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "{{PORT}}",
+									"path": [
+										"predict",
+										"triage",
+										"range"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "http://127.0.0.1:7001/predict/triage/level Copy 33",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"triage_level_test\", function () {",
+											"    var jsonData = pm.response.json();",
+											"    pm.expect(jsonData.triage_range).to.eql(\"Range 3\");",
+											"});"
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"chief_complaint\": \"Headache\",\n    \"spo2\": 99,\n    \"pulse_rate\": 80,\n    \"systolic_bp\": 110\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:{{PORT}}/predict/triage/range",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "{{PORT}}",
+									"path": [
+										"predict",
+										"triage",
+										"range"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "http://127.0.0.1:7001/predict/triage/level Copy 34",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"triage_level_test\", function () {",
+											"    var jsonData = pm.response.json();",
+											"    pm.expect(jsonData.triage_range).to.eql(\"Range 3\");",
+											"});"
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"chief_complaint\": \"Nasal congestion with mild sinus pressure\",\n    \"spo2\": 99,\n    \"pulse_rate\": 73,\n    \"systolic_bp\": 117\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:{{PORT}}/predict/triage/range",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "{{PORT}}",
+									"path": [
+										"predict",
+										"triage",
+										"range"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "http://127.0.0.1:7001/predict/triage/level Copy 35",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"triage_level_test\", function () {",
+											"    var jsonData = pm.response.json();",
+											"    pm.expect(jsonData.triage_range).to.eql(\"Range 3\");",
+											"});"
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "    {\n        \"chief_complaint\": \"Minor back pain after lifting heavy objects\",\n        \"spo2\": 98,\n        \"pulse_rate\": 82,\n        \"systolic_bp\": 120\n    }",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:{{PORT}}/predict/triage/range",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "{{PORT}}",
+									"path": [
+										"predict",
+										"triage",
+										"range"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "http://127.0.0.1:7001/predict/triage/level Copy 36",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"triage_level_test\", function () {",
+											"    var jsonData = pm.response.json();",
+											"    pm.expect(jsonData.triage_range).to.eql(\"Range 3\");",
+											"});"
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "    {\n        \"chief_complaint\": \"Low-grade fever with mild body aches\",\n        \"spo2\": 98,\n        \"pulse_rate\": 77,\n        \"systolic_bp\": 116\n    }",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:{{PORT}}/predict/triage/range",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "{{PORT}}",
+									"path": [
+										"predict",
+										"triage",
+										"range"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "http://127.0.0.1:7001/predict/triage/level Copy 37",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"triage_level_test\", function () {",
+											"    var jsonData = pm.response.json();",
+											"    pm.expect(jsonData.triage_range).to.eql(\"Range 3\");",
+											"});"
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "    {\n        \"chief_complaint\": \"Nasal congestion and sinus pressure with mild headache\",\n        \"spo2\": 99,\n        \"pulse_rate\": 73,\n        \"systolic_bp\": 117\n    }",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:{{PORT}}/predict/triage/range",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "{{PORT}}",
+									"path": [
+										"predict",
+										"triage",
+										"range"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "http://127.0.0.1:7001/predict/triage/level Copy 38",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"triage_level_test\", function () {",
+											"    var jsonData = pm.response.json();",
+											"    pm.expect(jsonData.triage_range).to.eql(\"Range 3\");",
+											"});"
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "    {\n        \"chief_complaint\": \"Small cut on finger, minor bleeding, no swelling\",\n        \"spo2\": 99,\n        \"pulse_rate\": 72,\n        \"systolic_bp\": 114\n    }",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:{{PORT}}/predict/triage/range",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "{{PORT}}",
+									"path": [
+										"predict",
+										"triage",
+										"range"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "http://127.0.0.1:7001/predict/triage/level Copy 39",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"triage_level_test\", function () {",
+											"    var jsonData = pm.response.json();",
+											"    pm.expect(jsonData.triage_range).to.eql(\"Range 3\");",
+											"});"
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"chief_complaint\": \"Minor ankle sprain after light fall, no swelling\",\n    \"spo2\": 99,\n    \"pulse_rate\": 75,\n    \"systolic_bp\": 118\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:{{PORT}}/predict/triage/range",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "{{PORT}}",
+									"path": [
+										"predict",
+										"triage",
+										"range"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "level5 Copy",
+					"item": [
+						{
+							"name": "http://127.0.0.1:7001/predict/triage/level Copy 40",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"triage_level_test\", function () {",
+											"    var jsonData = pm.response.json();",
+											"    pm.expect(jsonData.triage_range).to.eql(\"Range 3\");",
+											"});"
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"chief_complaint\": \"I have a mild skin rash that's a bit itchy but not too bothersome.\",\n    \"spo2\": 99,\n    \"pulse_rate\": 82,\n    \"systolic_bp\": 110\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:{{PORT}}/predict/triage/range",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "{{PORT}}",
+									"path": [
+										"predict",
+										"triage",
+										"range"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "http://127.0.0.1:7001/predict/triage/level Copy 41",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"triage_level_test\", function () {",
+											"    var jsonData = pm.response.json();",
+											"    pm.expect(jsonData.triage_range).to.eql(\"Range 3\");",
+											"});"
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"chief_complaint\": \"Slight Pain in the ankle, can still walk\",\n    \"systolic_bp\": 110,\n    \"spo2\": 98,\n    \"pulse_rate\": 71\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:{{PORT}}/predict/triage/range",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "{{PORT}}",
+									"path": [
+										"predict",
+										"triage",
+										"range"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "http://127.0.0.1:7001/predict/triage/level Copy 42",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"triage_level_test\", function () {",
+											"    var jsonData = pm.response.json();",
+											"    pm.expect(jsonData.triage_range).to.eql(\"Range 3\");",
+											"});"
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"chief_complaint\": \"Itchy eyes due to seasonal allergies\",\n    \"spo2\": 99,\n    \"pulse_rate\": 80,\n    \"systolic_bp\": 115\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:{{PORT}}/predict/triage/range",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "{{PORT}}",
+									"path": [
+										"predict",
+										"triage",
+										"range"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "http://127.0.0.1:7001/predict/triage/level Copy 43",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"triage_level_test\", function () {",
+											"    var jsonData = pm.response.json();",
+											"    pm.expect(jsonData.triage_range).to.eql(\"Range 3\");",
+											"});"
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"chief_complaint\": \"Sore neck after sleeping wrong\",\n    \"spo2\": 99,\n    \"pulse_rate\": 82,\n    \"systolic_bp\": 110\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:{{PORT}}/predict/triage/range",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "{{PORT}}",
+									"path": [
+										"predict",
+										"triage",
+										"range"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "http://127.0.0.1:7001/predict/triage/level Copy 44",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"triage_level_test\", function () {",
+											"    var jsonData = pm.response.json();",
+											"    pm.expect(jsonData.triage_range).to.eql(\"Range 3\");",
+											"});"
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"chief_complaint\": \"Fever with cough\",\n    \"spo2\": 98,\n    \"pulse_rate\": 88,\n    \"systolic_bp\": 118\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:{{PORT}}/predict/triage/range",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "{{PORT}}",
+									"path": [
+										"predict",
+										"triage",
+										"range"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "http://127.0.0.1:7001/predict/triage/level Copy 45",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"triage_level_test\", function () {",
+											"    var jsonData = pm.response.json();",
+											"    pm.expect(jsonData.triage_range).to.eql(\"Range 3\");",
+											"});"
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"chief_complaint\": \"Headache after prolonged screen time\",\n    \"spo2\": 99,\n    \"pulse_rate\": 82,\n    \"systolic_bp\": 112\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:{{PORT}}/predict/triage/range",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "{{PORT}}",
+									"path": [
+										"predict",
+										"triage",
+										"range"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "http://127.0.0.1:7001/predict/triage/level Copy 46",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"triage_level_test\", function () {",
+											"    var jsonData = pm.response.json();",
+											"    pm.expect(jsonData.triage_range).to.eql(\"Range 3\");",
+											"});"
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"chief_complaint\": \"Small bruise on arm, no swelling or pain\",\n    \"spo2\": 99,\n    \"pulse_rate\": 68,\n    \"systolic_bp\": 117\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:{{PORT}}/predict/triage/range",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "{{PORT}}",
+									"path": [
+										"predict",
+										"triage",
+										"range"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "http://127.0.0.1:7001/predict/triage/level Copy 47",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"triage_level_test\", function () {",
+											"    var jsonData = pm.response.json();",
+											"    pm.expect(jsonData.triage_range).to.eql(\"Range 3\");",
+											"});"
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "    {\n        \"chief_complaint\": \"Mild stomach upset without nausea or vomiting\",\n        \"spo2\": 98,\n        \"pulse_rate\": 74,\n        \"systolic_bp\": 115\n    }",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:{{PORT}}/predict/triage/range",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "{{PORT}}",
+									"path": [
+										"predict",
+										"triage",
+										"range"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "http://127.0.0.1:7001/predict/triage/level Copy 48",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"triage_level_test\", function () {",
+											"    var jsonData = pm.response.json();",
+											"    pm.expect(jsonData.triage_range).to.eql(\"Range 3\");",
+											"});"
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": " {\n        \"chief_complaint\": \"Mild rash with no discomfort\",\n        \"spo2\": 99,\n        \"pulse_rate\": 70,\n        \"systolic_bp\": 115\n    }",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:{{PORT}}/predict/triage/range",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "{{PORT}}",
+									"path": [
+										"predict",
+										"triage",
+										"range"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "http://127.0.0.1:7001/predict/triage/level Copy 49",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"triage_level_test\", function () {",
+											"    var jsonData = pm.response.json();",
+											"    pm.expect(jsonData.triage_range).to.eql(\"Range 3\");",
+											"});"
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"chief_complaint\": \"Minor muscle pain after exercise\",\n    \"spo2\": 99,\n    \"pulse_rate\": 74,\n    \"systolic_bp\": 120\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:{{PORT}}/predict/triage/range",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "{{PORT}}",
+									"path": [
+										"predict",
+										"triage",
+										"range"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "triage-level",
+			"item": [
+				{
+					"name": "level1",
+					"item": [
+						{
+							"name": "http://127.0.0.1:7001/predict/triage/level",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"triage_level_test\", function () {",
+											"    var jsonData = pm.response.json();",
+											"    pm.expect(jsonData.triage_level).to.eql(1);",
+											"});"
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"chief_complaint\": \"Severe allergic reaction with swelling\",\n    \"spo2\": 93,\n    \"pulse_rate\": 120,\n    \"systolic_bp\": 145\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:{{PORT}}/predict/triage/level",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "{{PORT}}",
+									"path": [
+										"predict",
+										"triage",
+										"level"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "http://127.0.0.1:7001/predict/triage/level Copy",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"triage_level_test\", function () {",
+											"    var jsonData = pm.response.json();",
+											"    pm.expect(jsonData.triage_level).to.eql(1);",
+											"});"
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"chief_complaint\": \"Unresponsive, not breathing\",\n    \"spo2\": 70,\n    \"pulse_rate\": 40,\n    \"systolic_bp\": 90\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:{{PORT}}/predict/triage/level",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "{{PORT}}",
+									"path": [
+										"predict",
+										"triage",
+										"level"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "http://127.0.0.1:7001/predict/triage/level Copy 2",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"triage_level_test\", function () {",
+											"    var jsonData = pm.response.json();",
+											"    pm.expect(jsonData.triage_level).to.eql(1);",
+											"});"
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"chief_complaint\": \"Severe shortness of breath\",\n    \"spo2\": 82,\n    \"pulse_rate\": 125,\n    \"systolic_bp\": 200\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:{{PORT}}/predict/triage/level",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "{{PORT}}",
+									"path": [
+										"predict",
+										"triage",
+										"level"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "http://127.0.0.1:7001/predict/triage/level Copy 3",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"triage_level_test\", function () {",
+											"    var jsonData = pm.response.json();",
+											"    pm.expect(jsonData.triage_level).to.eql(1);",
+											"});"
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"chief_complaint\": \"Gunshot wound to chest\",\n    \"spo2\": 60,\n    \"pulse_rate\": 45,\n    \"systolic_bp\": 50\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:{{PORT}}/predict/triage/level",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "{{PORT}}",
+									"path": [
+										"predict",
+										"triage",
+										"level"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "http://127.0.0.1:7001/predict/triage/level Copy 4",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"triage_level_test\", function () {",
+											"    var jsonData = pm.response.json();",
+											"    pm.expect(jsonData.triage_level).to.eql(1);",
+											"});"
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"chief_complaint\": \"severe Shortness of breath\",\n    \"spo2\":70,\n    \"pulse_rate\":160,\n    \"systolic_bp\":130\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:{{PORT}}/predict/triage/level",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "{{PORT}}",
+									"path": [
+										"predict",
+										"triage",
+										"level"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "http://127.0.0.1:7001/predict/triage/level Copy 5",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"triage_level_test\", function () {",
+											"    var jsonData = pm.response.json();",
+											"    pm.expect(jsonData.triage_level).to.eql(1);",
+											"});"
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"chief_complaint\": \"severe sudden headache,altered consciousness\",\n    \"spo2\":90,\n    \"pulse_rate\":40,\n    \"systolic_bp\":230\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:{{PORT}}/predict/triage/level",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "{{PORT}}",
+									"path": [
+										"predict",
+										"triage",
+										"level"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "http://127.0.0.1:7001/predict/triage/level Copy 6",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"triage_level_test\", function () {",
+											"    var jsonData = pm.response.json();",
+											"    pm.expect(jsonData.triage_level).to.eql(1);",
+											"});"
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"chief_complaint\": \"Unconscious\",\n    \"spo2\":80,\n    \"pulse_rate\":40,\n    \"systolic_bp\":70\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:{{PORT}}/predict/triage/level",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "{{PORT}}",
+									"path": [
+										"predict",
+										"triage",
+										"level"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "http://127.0.0.1:7001/predict/triage/level Copy 7",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"triage_level_test\", function () {",
+											"    var jsonData = pm.response.json();",
+											"    pm.expect(jsonData.triage_level).to.eql(1);",
+											"});"
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"chief_complaint\": \"severe chest pain\",\n    \"spo2\":80,\n    \"pulse_rate\":139,\n    \"systolic_bp\":220\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:{{PORT}}/predict/triage/level",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "{{PORT}}",
+									"path": [
+										"predict",
+										"triage",
+										"level"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "http://127.0.0.1:7001/predict/triage/level Copy 8",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"triage_level_test\", function () {",
+											"    var jsonData = pm.response.json();",
+											"    pm.expect(jsonData.triage_level).to.eql(1);",
+											"});"
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"chief_complaint\": \"severe face swelling\",\n    \"spo2\":85,\n    \"pulse_rate\":140,\n    \"systolic_bp\":80\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:{{PORT}}/predict/triage/level",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "{{PORT}}",
+									"path": [
+										"predict",
+										"triage",
+										"level"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "http://127.0.0.1:7001/predict/triage/level Copy 9",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"triage_level_test\", function () {",
+											"    var jsonData = pm.response.json();",
+											"    pm.expect(jsonData.triage_level).to.eql(1);",
+											"});"
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"chief_complaint\": \"Severe bleeding after a car accident\",\n    \"spo2\": 88,\n    \"pulse_rate\": 135,\n    \"systolic_bp\": 130\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:{{PORT}}/predict/triage/level",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "{{PORT}}",
+									"path": [
+										"predict",
+										"triage",
+										"level"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "level2",
+					"item": [
+						{
+							"name": "http://127.0.0.1:7001/predict/triage/level Copy 10",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"triage_level_test\", function () {",
+											"    var jsonData = pm.response.json();",
+											"    pm.expect(jsonData.triage_level).to.eql(2);",
+											"});"
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"chief_complaint\": \"Chest pain, difficulty breathing, feels faint\",\n    \"systolic_bp\": 140,\n    \"spo2\": 94,\n    \"pulse_rate\": 125\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:{{PORT}}/predict/triage/level",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "{{PORT}}",
+									"path": [
+										"predict",
+										"triage",
+										"level"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "http://127.0.0.1:7001/predict/triage/level Copy 11",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"triage_level_test\", function () {",
+											"    var jsonData = pm.response.json();",
+											"    pm.expect(jsonData.triage_level).to.eql(2);",
+											"});"
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"chief_complaint\": \"Traumatic injury to the head\",\n    \"spo2\": 90,\n    \"pulse_rate\": 115,\n    \"systolic_bp\": 165\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:{{PORT}}/predict/triage/level",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "{{PORT}}",
+									"path": [
+										"predict",
+										"triage",
+										"level"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "http://127.0.0.1:7001/predict/triage/level Copy 12",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"triage_level_test\", function () {",
+											"    var jsonData = pm.response.json();",
+											"    pm.expect(jsonData.triage_level).to.eql(2);",
+											"});"
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"chief_complaint\": \"Severe abdominal pain with vomiting\",\n    \"spo2\": 96,\n    \"pulse_rate\": 120,\n    \"systolic_bp\": 135\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:{{PORT}}/predict/triage/level",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "{{PORT}}",
+									"path": [
+										"predict",
+										"triage",
+										"level"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "http://127.0.0.1:7001/predict/triage/level Copy 13",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"triage_level_test\", function () {",
+											"    var jsonData = pm.response.json();",
+											"    pm.expect(jsonData.triage_level).to.eql(2);",
+											"});"
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"chief_complaint\": \"Possible stroke, slurred speech\",\n    \"spo2\": 94,\n    \"pulse_rate\": 100,\n    \"systolic_bp\": 170\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:{{PORT}}/predict/triage/level",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "{{PORT}}",
+									"path": [
+										"predict",
+										"triage",
+										"level"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "http://127.0.0.1:7001/predict/triage/level Copy 14",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"triage_level_test\", function () {",
+											"    var jsonData = pm.response.json();",
+											"    pm.expect(jsonData.triage_level).to.eql(2);",
+											"});"
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"chief_complaint\": \"Pain in the arm after a fall\",\n    \"spo2\": 99,\n    \"pulse_rate\": 125,\n    \"systolic_bp\": 115\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:{{PORT}}/predict/triage/level",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "{{PORT}}",
+									"path": [
+										"predict",
+										"triage",
+										"level"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "http://127.0.0.1:7001/predict/triage/level Copy 15",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"triage_level_test\", function () {",
+											"    var jsonData = pm.response.json();",
+											"    pm.expect(jsonData.triage_level).to.eql(2);",
+											"});"
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"chief_complaint\": \"Pain in the arm after a fall\",\n    \"spo2\": 99,\n    \"pulse_rate\": 125,\n    \"systolic_bp\": 115\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:{{PORT}}/predict/triage/level",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "{{PORT}}",
+									"path": [
+										"predict",
+										"triage",
+										"level"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "http://127.0.0.1:7001/predict/triage/level Copy 16",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"triage_level_test\", function () {",
+											"    var jsonData = pm.response.json();",
+											"    pm.expect(jsonData.triage_level).to.eql(2);",
+											"});"
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"chief_complaint\": \"Severe headache\",\n    \"spo2\": 99,\n    \"pulse_rate\": 105,\n    \"systolic_bp\": 140\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:{{PORT}}/predict/triage/level",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "{{PORT}}",
+									"path": [
+										"predict",
+										"triage",
+										"level"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "http://127.0.0.1:7001/predict/triage/level Copy 17",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"triage_level_test\", function () {",
+											"    var jsonData = pm.response.json();",
+											"    pm.expect(jsonData.triage_level).to.eql(2);",
+											"});"
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"chief_complaint\": \"Severe abdominal pain\",\n    \"spo2\": 88,\n    \"pulse_rate\": 135,\n    \"systolic_bp\": 175\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:{{PORT}}/predict/triage/level",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "{{PORT}}",
+									"path": [
+										"predict",
+										"triage",
+										"level"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "http://127.0.0.1:7001/predict/triage/level Copy 18",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"triage_level_test\", function () {",
+											"    var jsonData = pm.response.json();",
+											"    pm.expect(jsonData.triage_level).to.eql(2);",
+											"});"
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"chief_complaint\": \"Acute heart failure\",\n    \"spo2\": 85,\n    \"pulse_rate\": 120,\n    \"systolic_bp\": 75\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:{{PORT}}/predict/triage/level",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "{{PORT}}",
+									"path": [
+										"predict",
+										"triage",
+										"level"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "http://127.0.0.1:7001/predict/triage/level Copy 19",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"triage_level_test\", function () {",
+											"    var jsonData = pm.response.json();",
+											"    pm.expect(jsonData.triage_level).to.eql(2);",
+											"});"
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"chief_complaint\": \"Chest pain\",\n    \"spo2\": 85,\n    \"pulse_rate\": 140,\n    \"systolic_bp\": 180\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:{{PORT}}/predict/triage/level",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "{{PORT}}",
+									"path": [
+										"predict",
+										"triage",
+										"level"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "level3",
+					"item": [
+						{
+							"name": "http://127.0.0.1:7001/predict/triage/level Copy 20",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"triage_level_test\", function () {",
+											"    var jsonData = pm.response.json();",
+											"    pm.expect(jsonData.triage_level).to.eql(3);",
+											"});"
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"chief_complaint\": \"Headache with mild dizziness\",\n    \"spo2\": 99,\n    \"pulse_rate\": 105,\n    \"systolic_bp\": 130\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:{{PORT}}/predict/triage/level",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "{{PORT}}",
+									"path": [
+										"predict",
+										"triage",
+										"level"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "http://127.0.0.1:7001/predict/triage/level Copy 21",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"triage_level_test\", function () {",
+											"    var jsonData = pm.response.json();",
+											"    pm.expect(jsonData.triage_level).to.eql(3);",
+											"});"
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"chief_complaint\": \"high cough\",\n    \"spo2\": 92,\n    \"pulse_rate\": 115,\n    \"systolic_bp\": 125\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:{{PORT}}/predict/triage/level",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "{{PORT}}",
+									"path": [
+										"predict",
+										"triage",
+										"level"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "http://127.0.0.1:7001/predict/triage/level Copy 22",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"triage_level_test\", function () {",
+											"    var jsonData = pm.response.json();",
+											"    pm.expect(jsonData.triage_level).to.eql(3);",
+											"});"
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"chief_complaint\": \"Back pain after lifting heavy objects\",\n    \"spo2\": 99,\n    \"pulse_rate\": 108,\n    \"systolic_bp\": 120\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:{{PORT}}/predict/triage/level",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "{{PORT}}",
+									"path": [
+										"predict",
+										"triage",
+										"level"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "http://127.0.0.1:7001/predict/triage/level Copy 23",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"triage_level_test\", function () {",
+											"    var jsonData = pm.response.json();",
+											"    pm.expect(jsonData.triage_level).to.eql(3);",
+											"});"
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"chief_complaint\": \"Pain in the arm with swelling after a fall\",\n    \"spo2\": 99,\n    \"pulse_rate\": 130,\n    \"systolic_bp\": 110\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:{{PORT}}/predict/triage/level",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "{{PORT}}",
+									"path": [
+										"predict",
+										"triage",
+										"level"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "http://127.0.0.1:7001/predict/triage/level Copy 24",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"triage_level_test\", function () {",
+											"    var jsonData = pm.response.json();",
+											"    pm.expect(jsonData.triage_level).to.eql(3);",
+											"});"
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"chief_complaint\": \"Difficulty breathing with fever\",\n    \"spo2\": 94,\n    \"pulse_rate\": 120,\n    \"systolic_bp\": 128\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:{{PORT}}/predict/triage/level",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "{{PORT}}",
+									"path": [
+										"predict",
+										"triage",
+										"level"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "http://127.0.0.1:7001/predict/triage/level Copy 25",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"triage_level_test\", function () {",
+											"    var jsonData = pm.response.json();",
+											"    pm.expect(jsonData.triage_level).to.eql(3);",
+											"});"
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"chief_complaint\": \"Severe leg pain after a fall\",\n    \"spo2\": 98,\n    \"pulse_rate\": 105,\n    \"systolic_bp\": 130\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:{{PORT}}/predict/triage/level",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "{{PORT}}",
+									"path": [
+										"predict",
+										"triage",
+										"level"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "http://127.0.0.1:7001/predict/triage/level Copy 26",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"triage_level_test\", function () {",
+											"    var jsonData = pm.response.json();",
+											"    pm.expect(jsonData.triage_level).to.eql(3);",
+											"});"
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"chief_complaint\": \"Severe vomiting and dehydration\",\n    \"spo2\": 97,\n    \"pulse_rate\": 115,\n    \"systolic_bp\": 125\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:{{PORT}}/predict/triage/level",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "{{PORT}}",
+									"path": [
+										"predict",
+										"triage",
+										"level"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "http://127.0.0.1:7001/predict/triage/level Copy 27",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"triage_level_test\", function () {",
+											"    var jsonData = pm.response.json();",
+											"    pm.expect(jsonData.triage_level).to.eql(3);",
+											"});"
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"chief_complaint\": \"Severe pain in lower back with numbness\",\n    \"spo2\": 98,\n    \"pulse_rate\": 110,\n    \"systolic_bp\": 140\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:{{PORT}}/predict/triage/level",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "{{PORT}}",
+									"path": [
+										"predict",
+										"triage",
+										"level"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "http://127.0.0.1:7001/predict/triage/level Copy 28",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"triage_level_test\", function () {",
+											"    var jsonData = pm.response.json();",
+											"    pm.expect(jsonData.triage_level).to.eql(3);",
+											"});"
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"chief_complaint\": \"Severe headache with blurred vision\",\n    \"spo2\": 97,\n    \"pulse_rate\": 110,\n    \"systolic_bp\": 160\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:{{PORT}}/predict/triage/level",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "{{PORT}}",
+									"path": [
+										"predict",
+										"triage",
+										"level"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "http://127.0.0.1:7001/predict/triage/level Copy 29",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"triage_level_test\", function () {",
+											"    var jsonData = pm.response.json();",
+											"    pm.expect(jsonData.triage_level).to.eql(3);",
+											"});"
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"chief_complaint\": \"Pain in the arm\",\n    \"spo2\": 99,\n    \"pulse_rate\": 78,\n    \"systolic_bp\": 110\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:{{PORT}}/predict/triage/level",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "{{PORT}}",
+									"path": [
+										"predict",
+										"triage",
+										"level"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "level4",
+					"item": [
+						{
+							"name": "http://127.0.0.1:7001/predict/triage/level Copy 30",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"triage_level_test\", function () {",
+											"    var jsonData = pm.response.json();",
+											"    pm.expect(jsonData.triage_level).to.eql(4);",
+											"});"
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"chief_complaint\": \"Mild headache, slight dizziness\",\n    \"systolic_bp\": 120,\n    \"spo2\": 98,\n    \"pulse_rate\": 90\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:{{PORT}}/predict/triage/level",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "{{PORT}}",
+									"path": [
+										"predict",
+										"triage",
+										"level"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "http://127.0.0.1:7001/predict/triage/level Copy 31",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"triage_level_test\", function () {",
+											"    var jsonData = pm.response.json();",
+											"    pm.expect(jsonData.triage_level).to.eql(4);",
+											"});"
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"chief_complaint\": \"Insect bite with mild swelling\",\n    \"spo2\": 99,\n    \"pulse_rate\": 85,\n    \"systolic_bp\": 120\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:{{PORT}}/predict/triage/level",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "{{PORT}}",
+									"path": [
+										"predict",
+										"triage",
+										"level"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "http://127.0.0.1:7001/predict/triage/level Copy 32",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"triage_level_test\", function () {",
+											"    var jsonData = pm.response.json();",
+											"    pm.expect(jsonData.triage_level).to.eql(4);",
+											"});"
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"chief_complaint\": \"Minor abdominal pain without vomiting or diarrhea\",\n    \"spo2\": 98,\n    \"pulse_rate\": 80,\n    \"systolic_bp\": 125\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:{{PORT}}/predict/triage/level",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "{{PORT}}",
+									"path": [
+										"predict",
+										"triage",
+										"level"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "http://127.0.0.1:7001/predict/triage/level Copy 33",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"triage_level_test\", function () {",
+											"    var jsonData = pm.response.json();",
+											"    pm.expect(jsonData.triage_level).to.eql(4);",
+											"});"
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"chief_complaint\": \"Headache\",\n    \"spo2\": 99,\n    \"pulse_rate\": 80,\n    \"systolic_bp\": 110\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:{{PORT}}/predict/triage/level",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "{{PORT}}",
+									"path": [
+										"predict",
+										"triage",
+										"level"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "http://127.0.0.1:7001/predict/triage/level Copy 34",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"triage_level_test\", function () {",
+											"    var jsonData = pm.response.json();",
+											"    pm.expect(jsonData.triage_level).to.eql(4);",
+											"});"
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"chief_complaint\": \"Nasal congestion with mild sinus pressure\",\n    \"spo2\": 99,\n    \"pulse_rate\": 73,\n    \"systolic_bp\": 117\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:{{PORT}}/predict/triage/level",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "{{PORT}}",
+									"path": [
+										"predict",
+										"triage",
+										"level"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "http://127.0.0.1:7001/predict/triage/level Copy 35",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"triage_level_test\", function () {",
+											"    var jsonData = pm.response.json();",
+											"    pm.expect(jsonData.triage_level).to.eql(4);",
+											"});"
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "    {\n        \"chief_complaint\": \"Minor back pain after lifting heavy objects\",\n        \"spo2\": 98,\n        \"pulse_rate\": 82,\n        \"systolic_bp\": 120\n    }",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:{{PORT}}/predict/triage/level",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "{{PORT}}",
+									"path": [
+										"predict",
+										"triage",
+										"level"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "http://127.0.0.1:7001/predict/triage/level Copy 36",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"triage_level_test\", function () {",
+											"    var jsonData = pm.response.json();",
+											"    pm.expect(jsonData.triage_level).to.eql(4);",
+											"});"
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "    {\n        \"chief_complaint\": \"Low-grade fever with mild body aches\",\n        \"spo2\": 98,\n        \"pulse_rate\": 77,\n        \"systolic_bp\": 116\n    }",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:{{PORT}}/predict/triage/level",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "{{PORT}}",
+									"path": [
+										"predict",
+										"triage",
+										"level"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "http://127.0.0.1:7001/predict/triage/level Copy 37",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"triage_level_test\", function () {",
+											"    var jsonData = pm.response.json();",
+											"    pm.expect(jsonData.triage_level).to.eql(4);",
+											"});"
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "    {\n        \"chief_complaint\": \"Nasal congestion and sinus pressure with mild headache\",\n        \"spo2\": 99,\n        \"pulse_rate\": 73,\n        \"systolic_bp\": 117\n    }",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:{{PORT}}/predict/triage/level",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "{{PORT}}",
+									"path": [
+										"predict",
+										"triage",
+										"level"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "http://127.0.0.1:7001/predict/triage/level Copy 38",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"triage_level_test\", function () {",
+											"    var jsonData = pm.response.json();",
+											"    pm.expect(jsonData.triage_level).to.eql(4);",
+											"});"
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "    {\n        \"chief_complaint\": \"Small cut on finger, minor bleeding, no swelling\",\n        \"spo2\": 99,\n        \"pulse_rate\": 72,\n        \"systolic_bp\": 114\n    }",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:{{PORT}}/predict/triage/level",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "{{PORT}}",
+									"path": [
+										"predict",
+										"triage",
+										"level"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "http://127.0.0.1:7001/predict/triage/level Copy 39",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"triage_level_test\", function () {",
+											"    var jsonData = pm.response.json();",
+											"    pm.expect(jsonData.triage_level).to.eql(4);",
+											"});"
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"chief_complaint\": \"Minor ankle sprain after light fall, no swelling\",\n    \"spo2\": 99,\n    \"pulse_rate\": 75,\n    \"systolic_bp\": 118\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:{{PORT}}/predict/triage/level",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "{{PORT}}",
+									"path": [
+										"predict",
+										"triage",
+										"level"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "level5",
+					"item": [
+						{
+							"name": "http://127.0.0.1:7001/predict/triage/level Copy 40",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"triage_level_test\", function () {",
+											"    var jsonData = pm.response.json();",
+											"    pm.expect(jsonData.triage_level).to.eql(5);",
+											"});"
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"chief_complaint\": \"I have a mild skin rash that's a bit itchy but not too bothersome.\",\n    \"spo2\": 99,\n    \"pulse_rate\": 82,\n    \"systolic_bp\": 110\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:{{PORT}}/predict/triage/level",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "{{PORT}}",
+									"path": [
+										"predict",
+										"triage",
+										"level"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "http://127.0.0.1:7001/predict/triage/level Copy 41",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"triage_level_test\", function () {",
+											"    var jsonData = pm.response.json();",
+											"    pm.expect(jsonData.triage_level).to.eql(5);",
+											"});"
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"chief_complaint\": \"Slight Pain in the ankle, can still walk\",\n    \"systolic_bp\": 110,\n    \"spo2\": 98,\n    \"pulse_rate\": 71\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:{{PORT}}/predict/triage/level",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "{{PORT}}",
+									"path": [
+										"predict",
+										"triage",
+										"level"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "http://127.0.0.1:7001/predict/triage/level Copy 42",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"triage_level_test\", function () {",
+											"    var jsonData = pm.response.json();",
+											"    pm.expect(jsonData.triage_level).to.eql(5);",
+											"});"
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"chief_complaint\": \"Itchy eyes due to seasonal allergies\",\n    \"spo2\": 99,\n    \"pulse_rate\": 80,\n    \"systolic_bp\": 115\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:{{PORT}}/predict/triage/level",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "{{PORT}}",
+									"path": [
+										"predict",
+										"triage",
+										"level"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "http://127.0.0.1:7001/predict/triage/level Copy 43",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"triage_level_test\", function () {",
+											"    var jsonData = pm.response.json();",
+											"    pm.expect(jsonData.triage_level).to.eql(5);",
+											"});"
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"chief_complaint\": \"Sore neck after sleeping wrong\",\n    \"spo2\": 99,\n    \"pulse_rate\": 82,\n    \"systolic_bp\": 110\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:{{PORT}}/predict/triage/level",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "{{PORT}}",
+									"path": [
+										"predict",
+										"triage",
+										"level"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "http://127.0.0.1:7001/predict/triage/level Copy 44",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"triage_level_test\", function () {",
+											"    var jsonData = pm.response.json();",
+											"    pm.expect(jsonData.triage_level).to.eql(5);",
+											"});"
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"chief_complaint\": \"Fever with cough\",\n    \"spo2\": 98,\n    \"pulse_rate\": 88,\n    \"systolic_bp\": 118\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:{{PORT}}/predict/triage/level",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "{{PORT}}",
+									"path": [
+										"predict",
+										"triage",
+										"level"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "http://127.0.0.1:7001/predict/triage/level Copy 45",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"triage_level_test\", function () {",
+											"    var jsonData = pm.response.json();",
+											"    pm.expect(jsonData.triage_level).to.eql(5);",
+											"});"
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"chief_complaint\": \"Headache after prolonged screen time\",\n    \"spo2\": 99,\n    \"pulse_rate\": 82,\n    \"systolic_bp\": 112\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:{{PORT}}/predict/triage/level",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "{{PORT}}",
+									"path": [
+										"predict",
+										"triage",
+										"level"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "http://127.0.0.1:7001/predict/triage/level Copy 46",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"triage_level_test\", function () {",
+											"    var jsonData = pm.response.json();",
+											"    pm.expect(jsonData.triage_level).to.eql(5);",
+											"});"
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"chief_complaint\": \"Small bruise on arm, no swelling or pain\",\n    \"spo2\": 99,\n    \"pulse_rate\": 68,\n    \"systolic_bp\": 117\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:{{PORT}}/predict/triage/level",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "{{PORT}}",
+									"path": [
+										"predict",
+										"triage",
+										"level"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "http://127.0.0.1:7001/predict/triage/level Copy 47",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"triage_level_test\", function () {",
+											"    var jsonData = pm.response.json();",
+											"    pm.expect(jsonData.triage_level).to.eql(5);",
+											"});"
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "    {\n        \"chief_complaint\": \"Mild stomach upset without nausea or vomiting\",\n        \"spo2\": 98,\n        \"pulse_rate\": 74,\n        \"systolic_bp\": 115\n    }",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:{{PORT}}/predict/triage/level",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "{{PORT}}",
+									"path": [
+										"predict",
+										"triage",
+										"level"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "http://127.0.0.1:7001/predict/triage/level Copy 48",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"triage_level_test\", function () {",
+											"    var jsonData = pm.response.json();",
+											"    pm.expect(jsonData.triage_level).to.eql(5);",
+											"});"
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": " {\n        \"chief_complaint\": \"Mild rash with no discomfort\",\n        \"spo2\": 99,\n        \"pulse_rate\": 70,\n        \"systolic_bp\": 115\n    }",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:{{PORT}}/predict/triage/level",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "{{PORT}}",
+									"path": [
+										"predict",
+										"triage",
+										"level"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "http://127.0.0.1:7001/predict/triage/level Copy 49",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"triage_level_test\", function () {",
+											"    var jsonData = pm.response.json();",
+											"    pm.expect(jsonData.triage_level).to.eql(5);",
+											"});"
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"chief_complaint\": \"Minor muscle pain after exercise\",\n    \"spo2\": 99,\n    \"pulse_rate\": 74,\n    \"systolic_bp\": 120\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:{{PORT}}/predict/triage/level",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "{{PORT}}",
+									"path": [
+										"predict",
+										"triage",
+										"level"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "triage-level main",
+			"item": [
+				{
+					"name": "level1",
+					"item": [
+						{
+							"name": "http://127.0.0.1:7001/predict/triage/level",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"triage_level_test\", function () {",
+											"    var jsonData = pm.response.json();",
+											"    pm.expect(jsonData.triage_level).to.eql(1);",
+											"});"
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"chief_complaint\": \"Severe allergic reaction with swelling\",\n    \"spo2\": 93,\n    \"pulse_rate\": 120,\n    \"systolic_bp\": 145\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:{{PORT}}/main/triage",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "{{PORT}}",
+									"path": [
+										"main",
+										"triage"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "http://127.0.0.1:7001/predict/triage/level Copy",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"triage_level_test\", function () {",
+											"    var jsonData = pm.response.json();",
+											"    pm.expect(jsonData.triage_level).to.eql(1);",
+											"});"
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"chief_complaint\": \"Unresponsive, not breathing\",\n    \"spo2\": 70,\n    \"pulse_rate\": 40,\n    \"systolic_bp\": 90\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:{{PORT}}/main/triage",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "{{PORT}}",
+									"path": [
+										"main",
+										"triage"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "http://127.0.0.1:7001/predict/triage/level Copy 2",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"triage_level_test\", function () {",
+											"    var jsonData = pm.response.json();",
+											"    pm.expect(jsonData.triage_level).to.eql(1);",
+											"});"
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"chief_complaint\": \"Severe shortness of breath\",\n    \"spo2\": 82,\n    \"pulse_rate\": 125,\n    \"systolic_bp\": 200\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:{{PORT}}/main/triage",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "{{PORT}}",
+									"path": [
+										"main",
+										"triage"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "http://127.0.0.1:7001/predict/triage/level Copy 3",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"triage_level_test\", function () {",
+											"    var jsonData = pm.response.json();",
+											"    pm.expect(jsonData.triage_level).to.eql(1);",
+											"});"
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"chief_complaint\": \"Gunshot wound to chest\",\n    \"spo2\": 60,\n    \"pulse_rate\": 45,\n    \"systolic_bp\": 50\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:{{PORT}}/main/triage",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "{{PORT}}",
+									"path": [
+										"main",
+										"triage"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "http://127.0.0.1:7001/predict/triage/level Copy 4",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"triage_level_test\", function () {",
+											"    var jsonData = pm.response.json();",
+											"    pm.expect(jsonData.triage_level).to.eql(1);",
+											"});"
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"chief_complaint\": \"severe Shortness of breath\",\n    \"spo2\":70,\n    \"pulse_rate\":160,\n    \"systolic_bp\":130\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:{{PORT}}/main/triage",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "{{PORT}}",
+									"path": [
+										"main",
+										"triage"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "http://127.0.0.1:7001/predict/triage/level Copy 5",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"triage_level_test\", function () {",
+											"    var jsonData = pm.response.json();",
+											"    pm.expect(jsonData.triage_level).to.eql(1);",
+											"});"
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"chief_complaint\": \"severe sudden headache,altered consciousness\",\n    \"spo2\":90,\n    \"pulse_rate\":40,\n    \"systolic_bp\":230\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:{{PORT}}/main/triage",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "{{PORT}}",
+									"path": [
+										"main",
+										"triage"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "http://127.0.0.1:7001/predict/triage/level Copy 6",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"triage_level_test\", function () {",
+											"    var jsonData = pm.response.json();",
+											"    pm.expect(jsonData.triage_level).to.eql(1);",
+											"});"
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"chief_complaint\": \"Unconscious\",\n    \"spo2\":80,\n    \"pulse_rate\":40,\n    \"systolic_bp\":70\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:{{PORT}}/main/triage",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "{{PORT}}",
+									"path": [
+										"main",
+										"triage"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "http://127.0.0.1:7001/predict/triage/level Copy 7",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"triage_level_test\", function () {",
+											"    var jsonData = pm.response.json();",
+											"    pm.expect(jsonData.triage_level).to.eql(1);",
+											"});"
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"chief_complaint\": \"severe chest pain\",\n    \"spo2\":80,\n    \"pulse_rate\":139,\n    \"systolic_bp\":220\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:{{PORT}}/main/triage",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "{{PORT}}",
+									"path": [
+										"main",
+										"triage"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "http://127.0.0.1:7001/predict/triage/level Copy 8",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"triage_level_test\", function () {",
+											"    var jsonData = pm.response.json();",
+											"    pm.expect(jsonData.triage_level).to.eql(1);",
+											"});"
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"chief_complaint\": \"severe face swelling\",\n    \"spo2\":85,\n    \"pulse_rate\":140,\n    \"systolic_bp\":80\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:{{PORT}}/main/triage",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "{{PORT}}",
+									"path": [
+										"main",
+										"triage"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "http://127.0.0.1:7001/predict/triage/level Copy 9",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"triage_level_test\", function () {",
+											"    var jsonData = pm.response.json();",
+											"    pm.expect(jsonData.triage_level).to.eql(1);",
+											"});"
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"chief_complaint\": \"Severe bleeding after a car accident\",\n    \"spo2\": 88,\n    \"pulse_rate\": 135,\n    \"systolic_bp\": 130\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:{{PORT}}/main/triage",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "{{PORT}}",
+									"path": [
+										"main",
+										"triage"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "level2",
+					"item": [
+						{
+							"name": "http://127.0.0.1:7001/predict/triage/level Copy 10",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"triage_level_test\", function () {",
+											"    var jsonData = pm.response.json();",
+											"    pm.expect(jsonData.triage_level).to.eql(2);",
+											"});"
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"chief_complaint\": \"Chest pain, difficulty breathing, feels faint\",\n    \"systolic_bp\": 140,\n    \"spo2\": 94,\n    \"pulse_rate\": 125\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:{{PORT}}/main/triage",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "{{PORT}}",
+									"path": [
+										"main",
+										"triage"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "http://127.0.0.1:7001/predict/triage/level Copy 11",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"triage_level_test\", function () {",
+											"    var jsonData = pm.response.json();",
+											"    pm.expect(jsonData.triage_level).to.eql(2);",
+											"});"
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"chief_complaint\": \"Traumatic injury to the head\",\n    \"spo2\": 90,\n    \"pulse_rate\": 115,\n    \"systolic_bp\": 165\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:{{PORT}}/main/triage",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "{{PORT}}",
+									"path": [
+										"main",
+										"triage"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "http://127.0.0.1:7001/predict/triage/level Copy 12",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"triage_level_test\", function () {",
+											"    var jsonData = pm.response.json();",
+											"    pm.expect(jsonData.triage_level).to.eql(2);",
+											"});"
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"chief_complaint\": \"Severe abdominal pain with vomiting\",\n    \"spo2\": 96,\n    \"pulse_rate\": 120,\n    \"systolic_bp\": 135\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:{{PORT}}/main/triage",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "{{PORT}}",
+									"path": [
+										"main",
+										"triage"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "http://127.0.0.1:7001/predict/triage/level Copy 13",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"triage_level_test\", function () {",
+											"    var jsonData = pm.response.json();",
+											"    pm.expect(jsonData.triage_level).to.eql(2);",
+											"});"
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"chief_complaint\": \"Possible stroke, slurred speech\",\n    \"spo2\": 94,\n    \"pulse_rate\": 100,\n    \"systolic_bp\": 170\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:{{PORT}}/main/triage",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "{{PORT}}",
+									"path": [
+										"main",
+										"triage"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "http://127.0.0.1:7001/predict/triage/level Copy 14",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"triage_level_test\", function () {",
+											"    var jsonData = pm.response.json();",
+											"    pm.expect(jsonData.triage_level).to.eql(2);",
+											"});"
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"chief_complaint\": \"Pain in the arm after a fall\",\n    \"spo2\": 99,\n    \"pulse_rate\": 125,\n    \"systolic_bp\": 115\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:{{PORT}}/main/triage",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "{{PORT}}",
+									"path": [
+										"main",
+										"triage"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "http://127.0.0.1:7001/predict/triage/level Copy 15",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"triage_level_test\", function () {",
+											"    var jsonData = pm.response.json();",
+											"    pm.expect(jsonData.triage_level).to.eql(2);",
+											"});"
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"chief_complaint\": \"Pain in the arm after a fall\",\n    \"spo2\": 99,\n    \"pulse_rate\": 125,\n    \"systolic_bp\": 115\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:{{PORT}}/main/triage",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "{{PORT}}",
+									"path": [
+										"main",
+										"triage"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "http://127.0.0.1:7001/predict/triage/level Copy 16",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"triage_level_test\", function () {",
+											"    var jsonData = pm.response.json();",
+											"    pm.expect(jsonData.triage_level).to.eql(2);",
+											"});"
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"chief_complaint\": \"Severe headache\",\n    \"spo2\": 99,\n    \"pulse_rate\": 105,\n    \"systolic_bp\": 140\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:{{PORT}}/main/triage",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "{{PORT}}",
+									"path": [
+										"main",
+										"triage"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "http://127.0.0.1:7001/predict/triage/level Copy 17",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"triage_level_test\", function () {",
+											"    var jsonData = pm.response.json();",
+											"    pm.expect(jsonData.triage_level).to.eql(2);",
+											"});"
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"chief_complaint\": \"Severe abdominal pain\",\n    \"spo2\": 88,\n    \"pulse_rate\": 135,\n    \"systolic_bp\": 175\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:{{PORT}}/main/triage",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "{{PORT}}",
+									"path": [
+										"main",
+										"triage"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "http://127.0.0.1:7001/predict/triage/level Copy 18",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"triage_level_test\", function () {",
+											"    var jsonData = pm.response.json();",
+											"    pm.expect(jsonData.triage_level).to.eql(2);",
+											"});"
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"chief_complaint\": \"Acute heart failure\",\n    \"spo2\": 85,\n    \"pulse_rate\": 120,\n    \"systolic_bp\": 75\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:{{PORT}}/main/triage",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "{{PORT}}",
+									"path": [
+										"main",
+										"triage"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "http://127.0.0.1:7001/predict/triage/level Copy 19",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"triage_level_test\", function () {",
+											"    var jsonData = pm.response.json();",
+											"    pm.expect(jsonData.triage_level).to.eql(2);",
+											"});"
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"chief_complaint\": \"Chest pain\",\n    \"spo2\": 85,\n    \"pulse_rate\": 140,\n    \"systolic_bp\": 180\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:{{PORT}}/main/triage",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "{{PORT}}",
+									"path": [
+										"main",
+										"triage"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "level3",
+					"item": [
+						{
+							"name": "http://127.0.0.1:7001/predict/triage/level Copy 20",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"triage_level_test\", function () {",
+											"    var jsonData = pm.response.json();",
+											"    pm.expect(jsonData.triage_level).to.eql(3);",
+											"});"
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"chief_complaint\": \"Headache with mild dizziness\",\n    \"spo2\": 99,\n    \"pulse_rate\": 105,\n    \"systolic_bp\": 130\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:{{PORT}}/main/triage",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "{{PORT}}",
+									"path": [
+										"main",
+										"triage"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "http://127.0.0.1:7001/predict/triage/level Copy 21",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"triage_level_test\", function () {",
+											"    var jsonData = pm.response.json();",
+											"    pm.expect(jsonData.triage_level).to.eql(3);",
+											"});"
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"chief_complaint\": \"high cough\",\n    \"spo2\": 92,\n    \"pulse_rate\": 115,\n    \"systolic_bp\": 125\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:{{PORT}}/main/triage",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "{{PORT}}",
+									"path": [
+										"main",
+										"triage"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "http://127.0.0.1:7001/predict/triage/level Copy 22",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"triage_level_test\", function () {",
+											"    var jsonData = pm.response.json();",
+											"    pm.expect(jsonData.triage_level).to.eql(3);",
+											"});"
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"chief_complaint\": \"Back pain after lifting heavy objects\",\n    \"spo2\": 99,\n    \"pulse_rate\": 108,\n    \"systolic_bp\": 120\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:{{PORT}}/main/triage",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "{{PORT}}",
+									"path": [
+										"main",
+										"triage"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "http://127.0.0.1:7001/predict/triage/level Copy 23",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"triage_level_test\", function () {",
+											"    var jsonData = pm.response.json();",
+											"    pm.expect(jsonData.triage_level).to.eql(3);",
+											"});"
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"chief_complaint\": \"Pain in the arm with swelling after a fall\",\n    \"spo2\": 99,\n    \"pulse_rate\": 130,\n    \"systolic_bp\": 110\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:{{PORT}}/main/triage",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "{{PORT}}",
+									"path": [
+										"main",
+										"triage"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "http://127.0.0.1:7001/predict/triage/level Copy 24",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"triage_level_test\", function () {",
+											"    var jsonData = pm.response.json();",
+											"    pm.expect(jsonData.triage_level).to.eql(3);",
+											"});"
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"chief_complaint\": \"Difficulty breathing with fever\",\n    \"spo2\": 94,\n    \"pulse_rate\": 120,\n    \"systolic_bp\": 128\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:{{PORT}}/main/triage",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "{{PORT}}",
+									"path": [
+										"main",
+										"triage"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "http://127.0.0.1:7001/predict/triage/level Copy 25",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"triage_level_test\", function () {",
+											"    var jsonData = pm.response.json();",
+											"    pm.expect(jsonData.triage_level).to.eql(3);",
+											"});"
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"chief_complaint\": \"Severe leg pain after a fall\",\n    \"spo2\": 98,\n    \"pulse_rate\": 105,\n    \"systolic_bp\": 130\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:{{PORT}}/main/triage",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "{{PORT}}",
+									"path": [
+										"main",
+										"triage"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "http://127.0.0.1:7001/predict/triage/level Copy 26",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"triage_level_test\", function () {",
+											"    var jsonData = pm.response.json();",
+											"    pm.expect(jsonData.triage_level).to.eql(3);",
+											"});"
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"chief_complaint\": \"Severe vomiting and dehydration\",\n    \"spo2\": 97,\n    \"pulse_rate\": 115,\n    \"systolic_bp\": 125\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:{{PORT}}/main/triage",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "{{PORT}}",
+									"path": [
+										"main",
+										"triage"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "http://127.0.0.1:7001/predict/triage/level Copy 27",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"triage_level_test\", function () {",
+											"    var jsonData = pm.response.json();",
+											"    pm.expect(jsonData.triage_level).to.eql(3);",
+											"});"
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"chief_complaint\": \"Severe pain in lower back with numbness\",\n    \"spo2\": 98,\n    \"pulse_rate\": 110,\n    \"systolic_bp\": 140\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:{{PORT}}/main/triage",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "{{PORT}}",
+									"path": [
+										"main",
+										"triage"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "http://127.0.0.1:7001/predict/triage/level Copy 28",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"triage_level_test\", function () {",
+											"    var jsonData = pm.response.json();",
+											"    pm.expect(jsonData.triage_level).to.eql(3);",
+											"});"
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"chief_complaint\": \"Severe headache with blurred vision\",\n    \"spo2\": 97,\n    \"pulse_rate\": 110,\n    \"systolic_bp\": 160\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:{{PORT}}/main/triage",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "{{PORT}}",
+									"path": [
+										"main",
+										"triage"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "http://127.0.0.1:7001/predict/triage/level Copy 29",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"triage_level_test\", function () {",
+											"    var jsonData = pm.response.json();",
+											"    pm.expect(jsonData.triage_level).to.eql(3);",
+											"});"
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"chief_complaint\": \"Pain in the arm\",\n    \"spo2\": 99,\n    \"pulse_rate\": 78,\n    \"systolic_bp\": 110\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:{{PORT}}/main/triage",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "{{PORT}}",
+									"path": [
+										"main",
+										"triage"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "level4",
+					"item": [
+						{
+							"name": "http://127.0.0.1:7001/predict/triage/level Copy 30",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"triage_level_test\", function () {",
+											"    var jsonData = pm.response.json();",
+											"    pm.expect(jsonData.triage_level).to.eql(4);",
+											"});"
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"chief_complaint\": \"Mild headache, slight dizziness\",\n    \"systolic_bp\": 120,\n    \"spo2\": 98,\n    \"pulse_rate\": 90\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:{{PORT}}/main/triage",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "{{PORT}}",
+									"path": [
+										"main",
+										"triage"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "http://127.0.0.1:7001/predict/triage/level Copy 31",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"triage_level_test\", function () {",
+											"    var jsonData = pm.response.json();",
+											"    pm.expect(jsonData.triage_level).to.eql(4);",
+											"});"
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"chief_complaint\": \"Insect bite with mild swelling\",\n    \"spo2\": 99,\n    \"pulse_rate\": 85,\n    \"systolic_bp\": 120\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:{{PORT}}/main/triage",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "{{PORT}}",
+									"path": [
+										"main",
+										"triage"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "http://127.0.0.1:7001/predict/triage/level Copy 32",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"triage_level_test\", function () {",
+											"    var jsonData = pm.response.json();",
+											"    pm.expect(jsonData.triage_level).to.eql(4);",
+											"});"
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"chief_complaint\": \"Minor abdominal pain without vomiting or diarrhea\",\n    \"spo2\": 98,\n    \"pulse_rate\": 80,\n    \"systolic_bp\": 125\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:{{PORT}}/main/triage",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "{{PORT}}",
+									"path": [
+										"main",
+										"triage"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "http://127.0.0.1:7001/predict/triage/level Copy 33",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"triage_level_test\", function () {",
+											"    var jsonData = pm.response.json();",
+											"    pm.expect(jsonData.triage_level).to.eql(4);",
+											"});"
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"chief_complaint\": \"Headache\",\n    \"spo2\": 99,\n    \"pulse_rate\": 80,\n    \"systolic_bp\": 110\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:{{PORT}}/main/triage",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "{{PORT}}",
+									"path": [
+										"main",
+										"triage"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "http://127.0.0.1:7001/predict/triage/level Copy 34",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"triage_level_test\", function () {",
+											"    var jsonData = pm.response.json();",
+											"    pm.expect(jsonData.triage_level).to.eql(4);",
+											"});"
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"chief_complaint\": \"Nasal congestion with mild sinus pressure\",\n    \"spo2\": 99,\n    \"pulse_rate\": 73,\n    \"systolic_bp\": 117\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:{{PORT}}/main/triage",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "{{PORT}}",
+									"path": [
+										"main",
+										"triage"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "http://127.0.0.1:7001/predict/triage/level Copy 35",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"triage_level_test\", function () {",
+											"    var jsonData = pm.response.json();",
+											"    pm.expect(jsonData.triage_level).to.eql(4);",
+											"});"
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "    {\n        \"chief_complaint\": \"Minor back pain after lifting heavy objects\",\n        \"spo2\": 98,\n        \"pulse_rate\": 82,\n        \"systolic_bp\": 120\n    }",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:{{PORT}}/main/triage",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "{{PORT}}",
+									"path": [
+										"main",
+										"triage"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "http://127.0.0.1:7001/predict/triage/level Copy 36",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"triage_level_test\", function () {",
+											"    var jsonData = pm.response.json();",
+											"    pm.expect(jsonData.triage_level).to.eql(4);",
+											"});"
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "    {\n        \"chief_complaint\": \"Low-grade fever with mild body aches\",\n        \"spo2\": 98,\n        \"pulse_rate\": 77,\n        \"systolic_bp\": 116\n    }",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:{{PORT}}/main/triage",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "{{PORT}}",
+									"path": [
+										"main",
+										"triage"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "http://127.0.0.1:7001/predict/triage/level Copy 37",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"triage_level_test\", function () {",
+											"    var jsonData = pm.response.json();",
+											"    pm.expect(jsonData.triage_level).to.eql(4);",
+											"});"
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "    {\n        \"chief_complaint\": \"Nasal congestion and sinus pressure with mild headache\",\n        \"spo2\": 99,\n        \"pulse_rate\": 73,\n        \"systolic_bp\": 117\n    }",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:{{PORT}}/main/triage",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "{{PORT}}",
+									"path": [
+										"main",
+										"triage"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "http://127.0.0.1:7001/predict/triage/level Copy 38",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"triage_level_test\", function () {",
+											"    var jsonData = pm.response.json();",
+											"    pm.expect(jsonData.triage_level).to.eql(4);",
+											"});"
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "    {\n        \"chief_complaint\": \"Small cut on finger, minor bleeding, no swelling\",\n        \"spo2\": 99,\n        \"pulse_rate\": 72,\n        \"systolic_bp\": 114\n    }",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:{{PORT}}/main/triage",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "{{PORT}}",
+									"path": [
+										"main",
+										"triage"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "http://127.0.0.1:7001/predict/triage/level Copy 39",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"triage_level_test\", function () {",
+											"    var jsonData = pm.response.json();",
+											"    pm.expect(jsonData.triage_level).to.eql(4);",
+											"});"
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"chief_complaint\": \"Minor ankle sprain after light fall, no swelling\",\n    \"spo2\": 99,\n    \"pulse_rate\": 75,\n    \"systolic_bp\": 118\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:{{PORT}}/main/triage",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "{{PORT}}",
+									"path": [
+										"main",
+										"triage"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "level5",
+					"item": [
+						{
+							"name": "http://127.0.0.1:7001/predict/triage/level Copy 40",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"triage_level_test\", function () {",
+											"    var jsonData = pm.response.json();",
+											"    pm.expect(jsonData.triage_level).to.eql(5);",
+											"});"
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"chief_complaint\": \"I have a mild skin rash that's a bit itchy but not too bothersome.\",\n    \"spo2\": 99,\n    \"pulse_rate\": 82,\n    \"systolic_bp\": 110\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:{{PORT}}/main/triage",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "{{PORT}}",
+									"path": [
+										"main",
+										"triage"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "http://127.0.0.1:7001/predict/triage/level Copy 41",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"triage_level_test\", function () {",
+											"    var jsonData = pm.response.json();",
+											"    pm.expect(jsonData.triage_level).to.eql(5);",
+											"});"
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"chief_complaint\": \"Slight Pain in the ankle, can still walk\",\n    \"systolic_bp\": 110,\n    \"spo2\": 98,\n    \"pulse_rate\": 71\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:{{PORT}}/main/triage",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "{{PORT}}",
+									"path": [
+										"main",
+										"triage"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "http://127.0.0.1:7001/predict/triage/level Copy 42",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"triage_level_test\", function () {",
+											"    var jsonData = pm.response.json();",
+											"    pm.expect(jsonData.triage_level).to.eql(5);",
+											"});"
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"chief_complaint\": \"Itchy eyes due to seasonal allergies\",\n    \"spo2\": 99,\n    \"pulse_rate\": 80,\n    \"systolic_bp\": 115\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:{{PORT}}/main/triage",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "{{PORT}}",
+									"path": [
+										"main",
+										"triage"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "http://127.0.0.1:7001/predict/triage/level Copy 43",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"triage_level_test\", function () {",
+											"    var jsonData = pm.response.json();",
+											"    pm.expect(jsonData.triage_level).to.eql(5);",
+											"});"
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"chief_complaint\": \"Sore neck after sleeping wrong\",\n    \"spo2\": 99,\n    \"pulse_rate\": 82,\n    \"systolic_bp\": 110\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:{{PORT}}/main/triage",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "{{PORT}}",
+									"path": [
+										"main",
+										"triage"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "http://127.0.0.1:7001/predict/triage/level Copy 44",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"triage_level_test\", function () {",
+											"    var jsonData = pm.response.json();",
+											"    pm.expect(jsonData.triage_level).to.eql(5);",
+											"});"
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"chief_complaint\": \"Fever with cough\",\n    \"spo2\": 98,\n    \"pulse_rate\": 88,\n    \"systolic_bp\": 118\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:{{PORT}}/main/triage",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "{{PORT}}",
+									"path": [
+										"main",
+										"triage"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "http://127.0.0.1:7001/predict/triage/level Copy 45",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"triage_level_test\", function () {",
+											"    var jsonData = pm.response.json();",
+											"    pm.expect(jsonData.triage_level).to.eql(5);",
+											"});"
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"chief_complaint\": \"Headache after prolonged screen time\",\n    \"spo2\": 99,\n    \"pulse_rate\": 82,\n    \"systolic_bp\": 112\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:{{PORT}}/main/triage",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "{{PORT}}",
+									"path": [
+										"main",
+										"triage"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "http://127.0.0.1:7001/predict/triage/level Copy 46",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"triage_level_test\", function () {",
+											"    var jsonData = pm.response.json();",
+											"    pm.expect(jsonData.triage_level).to.eql(5);",
+											"});"
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"chief_complaint\": \"Small bruise on arm, no swelling or pain\",\n    \"spo2\": 99,\n    \"pulse_rate\": 68,\n    \"systolic_bp\": 117\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:{{PORT}}/main/triage",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "{{PORT}}",
+									"path": [
+										"main",
+										"triage"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "http://127.0.0.1:7001/predict/triage/level Copy 47",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"triage_level_test\", function () {",
+											"    var jsonData = pm.response.json();",
+											"    pm.expect(jsonData.triage_level).to.eql(5);",
+											"});"
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "    {\n        \"chief_complaint\": \"Mild stomach upset without nausea or vomiting\",\n        \"spo2\": 98,\n        \"pulse_rate\": 74,\n        \"systolic_bp\": 115\n    }",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:{{PORT}}/main/triage",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "{{PORT}}",
+									"path": [
+										"main",
+										"triage"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "http://127.0.0.1:7001/predict/triage/level Copy 48",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"triage_level_test\", function () {",
+											"    var jsonData = pm.response.json();",
+											"    pm.expect(jsonData.triage_level).to.eql(5);",
+											"});"
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": " {\n        \"chief_complaint\": \"Mild rash with no discomfort\",\n        \"spo2\": 99,\n        \"pulse_rate\": 70,\n        \"systolic_bp\": 115\n    }",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:{{PORT}}/main/triage",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "{{PORT}}",
+									"path": [
+										"main",
+										"triage"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "http://127.0.0.1:7001/predict/triage/level Copy 49",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"triage_level_test\", function () {",
+											"    var jsonData = pm.response.json();",
+											"    pm.expect(jsonData.triage_level).to.eql(5);",
+											"});"
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"chief_complaint\": \"Minor muscle pain after exercise\",\n    \"spo2\": 99,\n    \"pulse_rate\": 74,\n    \"systolic_bp\": 120\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:{{PORT}}/main/triage",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "{{PORT}}",
+									"path": [
+										"main",
+										"triage"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "PORT",
+			"value": "7002",
+			"type": "string",
+			"disabled": true
+		},
+		{
+			"key": "PORT",
+			"value": "5002",
+			"type": "string",
+			"disabled": true
+		},
+		{
+			"key": "PORT",
+			"value": "7001",
+			"type": "string",
+			"disabled": true
+		},
+		{
+			"key": "PORT",
+			"value": "5004",
+			"type": "string",
+			"disabled": true
+		},
+		{
+			"key": "PORT",
+			"value": "5003",
+			"type": "string",
+			"disabled": true
+		},
+		{
+			"key": "PORT",
+			"value": "8000",
+			"type": "string",
+			"disabled": true
+		},
+		{
+			"key": "PORT",
+			"value": "5001",
+			"type": "string",
+			"disabled": true
+		},
+		{
+			"key": "PORT",
+			"value": "9000",
+			"type": "string"
+		}
+	]
+}
