@@ -8,9 +8,11 @@ from nltk.tokenize import word_tokenize
 from nltk.stem import WordNetLemmatizer
 import string
 import logging
+from flask_cors import CORS
 
 # Initialize Flask app
 app = Flask(__name__)
+CORS(app)  # Enable CORS for all routes
 
 # Configure logging
 logging.basicConfig(level=logging.DEBUG)

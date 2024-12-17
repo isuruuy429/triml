@@ -1,7 +1,10 @@
 from flask import Flask, request, jsonify
 import requests
+from flask_cors import CORS
+
 
 app = Flask(__name__)
+CORS(app)  # Enable CORS for all routes
 
 # Triage Range API endpoint
 TRIAGE_RANGE_API = "http://127.0.0.1:8000/predict/triage/range"
@@ -27,6 +30,11 @@ def main_triage():
         triage_range = triage_range_data.get("triage_range")
         confidence_score_range = triage_range_data.get("confidence_score")
         redirect_api = triage_range_data.get("redirect_api")
+
+        shap_explanation = triage_range_data.get("shap_explanation", {})
+        systolic_bp_importance_impact = shap_explanation.get("systolic_bp_importance", {}).get("impact")
+        spo2_importance_impact = shap_explanation.get("spo2_importance", {}).get("impact")
+        pulse_rate_importance_impact = shap_explanation.get("pulse_rate_importance", {}).get("impact")
 
         # Log the Triage Range API response
         print(f"Triage Range API Response: {triage_range_data}")
@@ -59,7 +67,9 @@ def main_triage():
             "confidence_score_range": confidence_score_range,
             "triage_level": triage_level_data.get("triage_level"),
             "confidence_score_level": triage_level_data.get("confidence_score"),
-            "explanation": triage_level_data.get("explanation")  # Optional: Explanation from the Triage Level API
+            "systolic_bp_importance_impact": systolic_bp_importance_impact,
+            "spo2_importance_impact": spo2_importance_impact,
+            "pulse_rate_importance_impact": pulse_rate_importance_impact
         }
 
         return jsonify(final_response)

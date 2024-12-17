@@ -3,9 +3,11 @@ import numpy as np
 import pickle
 from tensorflow.keras.models import load_model
 import gensim.downloader as api
+from flask_cors import CORS
 
 # Initialize Flask app
 app = Flask(__name__)
+CORS(app)  # Enable CORS for all routes
 
 # Load the pre-trained GloVe model, scaler, and trained classifier model
 glove_model = api.load("glove-wiki-gigaword-200")
