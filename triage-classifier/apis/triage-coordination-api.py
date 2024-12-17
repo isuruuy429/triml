@@ -49,7 +49,10 @@ def main_triage():
                 "confidence_score_range": confidence_score_range,
                 "triage_level": 3,  # Direct mapping from range 2 to level 3
                 "confidence_score_level": confidence_score_range,  # Assuming confidence is the same
-                "explanation": "Triage range indicates direct assignment to level 3."
+                "systolic_bp_importance_impact": systolic_bp_importance_impact,
+                "spo2_importance_impact": spo2_importance_impact,
+                "pulse_rate_importance_impact": pulse_rate_importance_impact,
+                "Note": "Triage range indicates direct assignment to level 3."
             }
             return jsonify(final_response)
 
